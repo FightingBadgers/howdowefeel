@@ -44,7 +44,7 @@ analyzer.load_defaults
 
 ##
 # Get list of topics to search for in the Twiter stream from command line arguments.
-# USAGE: ruby twitter.rb topic1 topic2 etc.
+# USAGE: ruby howdowefeel.rb topic1 topic2 etc.
 topics = ARGV[0..ARGV.size - 1]
 
 if topics.empty?
