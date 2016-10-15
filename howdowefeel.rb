@@ -3,15 +3,6 @@ require 'twitter'
 require 'csv'
 require_relative 'lib/sentimental'
 
-##
-# Change these values with your keys and access tokens to connect to the Twitter API.
-# stream_client = Twitter::Streaming::Client.new do |config|
-#   config.consumer_key        = [YOUR_CONSUMER_KEY]
-#   config.consumer_secret     = [YOUR_CONSUMER_SECRET]
-#   config.access_token        = [YOUR_ACCESS_TOKEN]
-#   config.access_token_secret = [YOUR_ACCESS_TOKEN_SECRET]
-# end
-
 def process_tweet(analyzer, tweet, topics)
   if tweet.is_a?(Twitter::Tweet)
     begin
@@ -37,11 +28,13 @@ def process_tweet(analyzer, tweet, topics)
   end
 end
 
+#
+Change these values with your keys and access tokens to connect to the Twitter API.
 stream_client = Twitter::Streaming::Client.new do |config|
-  config.consumer_key        = "Df8uVeGOczcWKBr3rKZ8LNAhP"
-  config.consumer_secret     = "YhB6nvfkxYMIO9violAv6g0qJOORCaE2QoUD2oPlmvAjZC6fmB"
-  config.access_token        = "2720291305-YrCdVLzEFvA4GqgRZVD9uF8tBwr4hYwyXRihvSp"
-  config.access_token_secret = "zSTjfgiWMfoCmmK508qRsyIdE4GxAJwKdmwGh4pgwkK82"
+  config.consumer_key        = [YOUR_CONSUMER_KEY]
+  config.consumer_secret     = [YOUR_CONSUMER_SECRET]
+  config.access_token        = [YOUR_ACCESS_TOKEN]
+  config.access_token_secret = [YOUR_ACCESS_TOKEN_SECRET]
 end
 
 ##
